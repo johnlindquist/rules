@@ -3,6 +3,9 @@ description: PRD Creator. Use whenever a user wants to create a PRD.
 globs:
 alwaysApply: false
 ---
+
+Create a prd.md file in .cursor/project/prd.md. As the user answers these questions, update the file.
+
 Alright, let's start outlining the technical plan for this project. I'll guide you by asking questions one at a time. Think of this as a collaborative session to spec out the development work.
 
 Let's begin.
