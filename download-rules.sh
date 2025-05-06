@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-API_URL="https://api.github.com/repos/johnlindquist/rules-for-tools/contents/.cursor/rules"
-RAW_URL="https://raw.githubusercontent.com/johnlindquist/rules-for-tools/main/.cursor/rules"
+API_URL="https://api.github.com/repos/johnlindquist/rules-for-tools/contents"
+RAW_URL="https://raw.githubusercontent.com/johnlindquist/rules-for-tools/main"
 
 # Warn if jq is not installed
 if ! command -v jq >/dev/null 2>&1; then
@@ -16,16 +16,23 @@ cd .cursor/rules
 
 echo "Fetching rule file list..."
 
-# Try to use jq if available, otherwise fallback to grep/sed/awk
 if command -v jq >/dev/null 2>&1; then
   curl -fsSL "$API_URL" | jq -r '.[] | select(.name | endswith(".mdc")) | .name' | while read -r file; do
-    echo "  - $file"
-    curl -fsSLO "$RAW_URL/$file"
+    if [ -f "$file" ]; then
+      echo "  - $file already exists, skipping."
+    else
+      echo "  - Downloading $file"
+      curl -fsSLO "$RAW_URL/$file"
+    fi
   done
 else
   curl -fsSL "$API_URL" | grep '"name":' | grep '.mdc' | sed -E 's/.*"name": "([^"]+)".*/\1/' | while read -r file; do
-    echo "  - $file"
-    curl -fsSLO "$RAW_URL/$file"
+    if [ -f "$file" ]; then
+      echo "  - $file already exists, skipping."
+    else
+      echo "  - Downloading $file"
+      curl -fsSLO "$RAW_URL/$file"
+    fi
   done
 fi
 
