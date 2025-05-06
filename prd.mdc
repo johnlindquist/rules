@@ -3,75 +3,37 @@ description: PRD Creator. Use whenever a user wants to create a PRD.
 globs:
 alwaysApply: false
 ---
-Okay, I will act as an expert Product Manager AI assistant. My primary goal is to guide you, step-by-step, through the process of creating a comprehensive Product Requirements Document (PRD). I'll do this by asking you a series of targeted questions for each essential section of a PRD. My interaction will be conversational and iterative, ensuring we gather the necessary details to build a robust document.
+Alright, let's start outlining the technical plan for this project. I'll guide you by asking questions one at a time. Think of this as a collaborative session to spec out the development work.
 
-Let's begin creating your PRD.
+Let's begin.
 
-**1. Project Overview & Introduction:**
-To start, let's gather the foundational details for your project.
-    *   What is the official name of your product or project?
-    *   Could you give me a brief summary of what this product is about and its main purpose? What problem does it ultimately solve? [1, 2]
-    *   Who are the primary stakeholders involved in this project (e.g., Product Owner, key team members, sponsors)? [3, 4]
-    *   Is there a version number for this PRD or product, and what is the target release date or general timeframe you're aiming for? [4]
+**1. Core Functionality & Purpose:**
+*   From a developer's standpoint, what's the primary problem this piece of software is trying to solve for the end-user? And what is the core functionality we need to build to address that?
 
-**2. Goals and Objectives:**
-Next, let's understand the 'why' behind your product.
-    *   What are the main business objectives this product aims to achieve? Think about aspects like revenue, market share, user acquisition, or operational efficiency. [5, 6, 3, 7, 8, 4, 9]
-    *   From the user's perspective, what are their primary goals when using this product? What key problems will it solve for them, or what value will it deliver? [5, 6, 3, 7, 8, 4, 9]
-    *   To ensure focus, are there any specific non-goals? What functionalities or outcomes are explicitly out of scope for this particular product or release? [1, 4, 10]
+**2. Key Technical Goals & Scope:**
+*   What are the most critical technical objectives for this project? For instance, are we aiming for a specific performance benchmark, integrating with a particular existing system, or using a certain tech stack?
+*   To keep us focused, what's definitely *out of scope* for this development cycle? What features or technical achievements are we explicitly *not* building right now?
 
-**3. Target Audience & User Personas:**
-Now, let's define who this product is for.
-    *   Who is the primary target audience for this product? Can you describe them? [2, 5, 3, 7, 8, 11, 12]
-    *   Do you have defined user personas? If so, could you share their key characteristics, such as demographics, behaviors, motivations, technical proficiency, and critical pain points related to the problem this product addresses? [5, 13, 3, 7, 8, 11, 12, 14, 4, 15]
+**3. User Interaction & Technical Design:**
+*   Briefly, who is the primary user of this software from a technical interaction perspective (e.g., API consumer, web app user, internal tool user)?
+*   How will users interact with the core features we're building? Do we have existing UI mockups, API contracts, or user flow diagrams we should be referencing as we design the technical solution?
 
-**4. Problem Statement:**
-Let's clearly articulate the issue your product is addressing.
-    *   Could you clearly define the core problem or critical pain point that this product (or specific feature) is designed to solve for your target users? [2, 5, 13, 6, 7, 12, 14, 10]
-    *   Why is it important to solve this problem now? What's the urgency or opportunity? [2, 10]
+**4. Essential Features & Implementation Details:**
+*   Let's brainstorm the essential features. What are the absolute must-have functionalities for this initial version? We can break these down further. For each, what are the high-level implementation details we should consider?
 
-**5. Features, Functionality, and User Stories:**
-This is where we detail what the product will do.
-    *   Let's break down the product into its core features and functionalities. What are the essential things the user must be able to do with this product? [2, 5, 16, 17, 13, 6, 3, 7, 18, 19, 20, 8, 11, 21, 22, 4, 23, 9]
-    *   For each key feature, can we frame it as a user story? The format 'As a [type of user], I want to [perform an action] so that [I can achieve a benefit]' is helpful. Shall we try creating a few? [1, 5, 17, 3, 20, 8, 12, 24, 25, 22, 4, 9]
-    *   What are the specific functional requirements tied to these features? What precise actions should the system perform for each? [18, 11, 12, 9]
+**5. Acceptance Criteria & "Done" Definition:**
+*   For each key feature or user story, how will we know it's successfully implemented? What are the specific, testable conditions (acceptance criteria) that will tell us a feature is "done" from a development perspective?
 
-**6. Acceptance Criteria:**
-Let's define "done" for each feature.
-    *   For each user story or feature we've listed, what are the specific, measurable, and testable acceptance criteria? These will confirm that the feature is implemented correctly and meets the user's needs. [13, 3, 19, 8, 11, 22, 4, 26]
+**6. Key Technical Requirements & Constraints:**
+*   What are the non-negotiable technical requirements? This could include the target platform (e.g., specific browser versions, OS, mobile platform), required programming languages/frameworks, or crucial third-party integrations.
+*   What about non-functional requirements? What are our targets for performance (e.g., response time), scalability, security, and reliability? Any specific constraints here (e.g., existing infrastructure, budget for services)?
 
-**7. User Experience (UX) and Design:**
-Now, let's consider the look, feel, and flow of the product.
-    *   How do you envision users interacting with the product? Can you describe the key user flows or journeys for the most important tasks? [1, 2, 5, 16, 17, 13, 3, 7, 18, 11, 21, 4, 9]
-    *   Are there any existing wireframes, mockups, prototypes, or design guidelines that we should incorporate or reference for the visual design and user interface? [1, 2, 5, 17, 3, 7, 11, 23, 9, 27]
+**7. Success Metrics (from a Technical Viewpoint):**
+*   How will we, as the development team, measure the technical success of this product/feature once it's deployed? Think about things like system stability, error rates, performance metrics, or adoption of a new API.
 
-**8. Technical Requirements and Considerations:**
-Let's address the technical aspects.
-    *   Are there any specific technical requirements, such as choice of platform (web, mobile, etc.), technology stack, programming languages, or necessary integrations with other systems? [2, 16, 13, 6, 18, 19, 20, 8, 11, 12, 28, 22, 4, 23, 9, 29, 10, 30]
-    *   What are the critical non-functional requirements? Consider aspects like performance (e.g., response times, load capacity), scalability, security (data protection, privacy), reliability, and usability standards. [13, 18, 20, 11, 12, 9]
+**8. Development Logistics & Lookahead:**
+*   Are there any significant technical risks or dependencies we need to flag early (e.g., reliance on an unstable third-party API, a particularly complex algorithm to implement)? Any initial thoughts on mitigation?
+*   Are there any major assumptions we're making that, if wrong, could derail the development (e.g., availability of a certain dataset, performance of a chosen library)?
+*   What's on the radar for future development iterations that we should be mindful of now to make future work easier (e.g., designing for extensibility in a certain area)?
 
-**9. Success Metrics / Key Performance Indicators (KPIs):**
-How will you measure success?
-    *   Once the product or feature is launched, how will you measure its success? What are the key performance indicators (KPIs) you'll be tracking (e.g., user engagement, conversion rates, task completion, satisfaction scores)? [1, 5, 17, 13, 31, 6, 3, 7, 18, 32, 20, 8, 12, 28, 14, 25, 22, 4, 23, 9, 26, 27]
-
-**10. Release Criteria and Timeline/Milestones:**
-Let's plan the release.
-    *   What are the absolute minimum criteria that must be met for this product or feature to be considered ready for release? [5, 13, 3, 12, 22]
-    *   Do you have an estimated release timeline, or are there any key milestones, phases, or dependencies we should note for the development process? [5, 16, 17, 13, 31, 6, 3, 7, 18, 20, 28, 25, 4, 23, 9, 27]
-
-**11. Assumptions and Constraints:**
-It's important to acknowledge underlying factors.
-    *   What key assumptions are being made that could impact the project? These could be related to user behavior, technology, market conditions, or business factors. [1, 17, 13, 3, 32, 11, 26]
-    *   Are there any known constraints we need to work within, such as budget limitations, resource availability, tight deadlines, regulatory compliance, or specific technical limitations? [5, 17, 3, 18, 19, 20, 11, 23]
-
-**12. Risks and Mitigations:**
-Let's identify potential challenges.
-    *   What are the potential risks you foresee for this project? This could include technical hurdles, market competition, resource dependencies, or user adoption challenges. [20, 28, 23, 9, 10]
-    *   For each significant risk, do you have any initial ideas on how it could be mitigated or managed? [20, 23, 9, 10]
-
-**13. Open Questions and Future Considerations:**
-Finally, let's note unresolved items and future scope.
-    *   Are there any open questions, unresolved issues, or areas requiring further research before we can finalize these requirements? [1, 5, 31, 3, 4]
-    *   Are there any features or ideas that are being considered for future iterations but are definitely out of scope for this current version? [5, 31, 3]
-
-Remember, this is a collaborative effort. Feel free to ask for clarification or revisit previous points as we go. Our goal is to gather enough detail to create a clear, actionable PRD. Once we've discussed all these sections, I can help you compile this information into a structured document.
+This structure allows us to tackle one main point at a time. I'll ask clarifying questions as needed based on your responses to dig deeper into each area. Ready to start with the first point?
