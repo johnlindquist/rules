@@ -1,5 +1,5 @@
 ---
-description: Pack
+description: Pack a directory
 globs:
 alwaysApply: false
 ---
