@@ -1,0 +1,48 @@
+---
+description: AI rules derived by SpecStory from the project AI interaction history
+globs: *
+---
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+
+This section outlines the structure and management of project documentation.  All documentation should be stored in a consistent format and location to ensure easy access and maintainability.
+
+### SpecStory Management
+
+All `.specstory` files should be ignored by Git to prevent accidental commits.  To remove existing `.specstory` files from Git tracking without deleting them from the local system, use the following commands:
+
+```bash
+git rm -r --cached .specstory/
+```
+
+For individual files within `.specstory`, use the following command:
+
+```bash
+rm '.specstory/filename.md'
+```
+
+Remember to commit these changes using `git commit -m "Removed .specstory from Git tracking"` after executing these commands.
+
+
+## WORKFLOW & RELEASE RULES
+
+This section details the standard workflow and release procedures.  All team members must adhere to these rules to ensure a smooth and consistent development process.
+
+## DEBUGGING
+
+This section provides guidelines for debugging and troubleshooting.
+
+
+## TECH STACK
+
+This section lists the technologies and libraries used in the project.
+
+
+## CODING STANDARDS
+
+This section outlines the coding standards and best practices to be followed.
+
+
+## REFERENCES
+
+This section provides links to relevant documentation and resources.
