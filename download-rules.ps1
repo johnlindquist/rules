@@ -1,5 +1,5 @@
-$apiUrl = "https://api.github.com/repos/johnlindquist/rules-for-tools/contents"
-$rawUrl = "https://raw.githubusercontent.com/johnlindquist/rules-for-tools/main"
+$apiUrl = "https://api.github.com/repos/johnlindquist/rules/contents"
+$rawUrl = "https://raw.githubusercontent.com/johnlindquist/rules/main"
 $destDir = ".cursor/rules"
 
 if (-not (Test-Path $destDir)) {

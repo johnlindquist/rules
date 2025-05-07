@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-API_URL="https://api.github.com/repos/johnlindquist/rules-for-tools/contents"
-RAW_URL="https://raw.githubusercontent.com/johnlindquist/rules-for-tools/main"
+API_URL="https://api.github.com/repos/johnlindquist/rules/contents"
+RAW_URL="https://raw.githubusercontent.com/johnlindquist/rules/main"
 
 # Warn if jq is not installed
 if ! command -v jq >/dev/null 2>&1; then
