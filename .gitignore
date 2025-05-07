@@ -138,3 +138,5 @@ dist
 .pnp.*
 
 .cursor/rules/derived-cursor-rules.mdc
+# SpecStory derived-cursor-rules.mdc backup files
+.specstory/ai_rules_backups/*
