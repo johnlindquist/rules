@@ -21,7 +21,17 @@ For individual files within `.specstory`, use the following command:
 rm '.specstory/filename.md'
 ```
 
-Remember to commit these changes using `git commit -m "Removed .specstory from Git tracking"` after executing these commands.
+After removing files from git tracking, commit and push changes using:
+
+```bash
+git commit -am 'chore: remove .specstory from git tracking and update .gitignore'
+git push
+```
+To add all unstaged changes, commit, and push:
+
+```bash
+git add -A && git commit -m 'chore: commit all un-staged changes' && git push
+```
 
 
 ## WORKFLOW & RELEASE RULES
